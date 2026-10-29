@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CPUV" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#00695C</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#EF6C00</item>
+    </style>
+
+    <style name="Theme.CPUV.Black" parent="Theme.CPUV">
+        <item name="colorPrimary">#4DB6AC</item>
+        <item name="colorOnPrimary">#00201C</item>
+        <item name="colorSurface">#000000</item>
+        <item name="colorSurfaceContainer">#0E0E0E</item>
+        <item name="android:colorBackground">#000000</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+</resources>

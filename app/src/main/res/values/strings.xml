@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">CPU-V</string>
+    <string name="cpu" translatable="false">CPU</string>
+    <string name="android" translatable="false">Android</string>
+    <string name="api_level" translatable="false">API</string>
+    <string name="abi" translatable="false">ABI</string>
+    <string name="kernel" translatable="false">Kernel</string>
+    <string name="ip_address" translatable="false">IP</string>
+    <string name="ssid" translatable="false">SSID</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="device">Device</string>
+    <string name="system">System</string>
+    <string name="battery">Battery</string>
+    <string name="network">Network</string>
+    <string name="display">Display</string>
+    <string name="memory">Memory</string>
+    <string name="sensors">Sensors</string>
+    <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="theme">Theme</string>
+    <string name="system_default">System default</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="black">Black</string>
+    <string name="grant_permission">Grant permission</string>
+    <string name="permission_needed">Permission needed to show more info</string>
+    <string name="model">Model</string>
+    <string name="manufacturer">Manufacturer</string>
+    <string name="brand">Brand</string>
+    <string name="board">Board</string>
+    <string name="hardware">Hardware</string>
+    <string name="security_patch">Security patch</string>
+    <string name="build">Build</string>
+    <string name="cores">Cores</string>
+    <string name="frequency">Frequency</string>
+    <string name="level">Level</string>
+    <string name="status">Status</string>
+    <string name="temperature">Temperature</string>
+    <string name="voltage">Voltage</string>
+    <string name="technology">Technology</string>
+    <string name="health">Health</string>
+    <string name="current">Current</string>
+    <string name="power_source">Power source</string>
+    <string name="charging">Charging</string>
+    <string name="discharging">Discharging</string>
+    <string name="full">Full</string>
+    <string name="not_charging">Not charging</string>
+    <string name="good">Good</string>
+    <string name="problem">Problem</string>
+    <string name="connection">Connection</string>
+    <string name="link_speed">Link speed</string>
+    <string name="operator">Operator</string>
+    <string name="network_type">Network type</string>
+    <string name="resolution">Resolution</string>
+    <string name="density">Density</string>
+    <string name="refresh_rate">Refresh rate</string>
+    <string name="screen_size">Screen size</string>
+    <string name="total">Total</string>
+    <string name="used">Used</string>
+    <string name="free">Free</string>
+    <string name="storage">Storage</string>
+    <string name="vendor">Vendor</string>
+    <string name="type">Type</string>
+    <string name="power">Power</string>
+    <string name="max_range">Max range</string>
+    <string name="min_delay">Min delay</string>
+    <string name="live_values">Live values</string>
+    <string name="ram_usage">RAM usage (%)</string>
+    <string name="battery_current">Battery current (mA)</string>
+    <string name="connectivity">Connectivity</string>
+    <string name="camera">Camera</string>
+    <string name="thermal">Thermal</string>
+    <string name="tests">Tests</string>
+    <string name="supported">Supported</string>
+    <string name="not_supported">Not supported</string>
+    <string name="back_camera">Back</string>
+    <string name="front_camera">Front</string>
+    <string name="flash">Flash</string>
+    <string name="focal_length">Focal length</string>
+    <string name="thermal_status">Thermal status</string>
+    <string name="touches_detected">Touches detected: %d</string>
+    <string name="question_multitouch">Does the screen detect multiple fingers?</string>
+    <string name="question_generic">Did this test work correctly?</string>
+    <string name="hint_display">Tap the screen to change the color</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="passed">Passed</string>
+    <string name="failed">Failed</string>
+    <string name="not_tested">Not tested</string>
+    <string name="mic_level">Microphone level</string>
+    <string name="test_display">Display</string>
+    <string name="test_multitouch">Multi-touch</string>
+    <string name="test_flashlight">Flashlight</string>
+    <string name="test_loudspeaker">Loudspeaker</string>
+    <string name="test_earpiece">Earpiece</string>
+    <string name="test_microphone">Microphone</string>
+    <string name="test_proximity">Proximity</string>
+    <string name="test_light">Light sensor</string>
+    <string name="test_accelerometer">Accelerometer</string>
+    <string name="test_charging">Charging</string>
+    <string name="test_vibration">Vibration</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="codecs" translatable="false">Codecs</string>
+    <string name="bluetooth" translatable="false">Bluetooth</string>
+    <string name="audio">Audio</string>
+    <string name="features">Features</string>
+    <string name="share_report">Share report</string>
+    <string name="copied">Copied</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="released">Released</string>
+</resources>
