@@ -81,10 +81,12 @@ class TestActivity : AppCompatActivity(), SensorEventListener {
         finish()
     }
 
+    private fun currentId(): String = id.toString()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         ThemeHelper.setup(this)
         super.onCreate(savedInstanceState)
-        id = intent.getStringExtra("id") ?: ids[0]
+        id = intent.getStringExtra("id")?.toString() ?: ids[0]
         val root = FrameLayout(this).apply {
             setBackgroundColor(Color.BLACK)
             fitsSystemWindows = true
@@ -101,7 +103,7 @@ class TestActivity : AppCompatActivity(), SensorEventListener {
             setPadding(dp(24), dp(16), dp(24), dp(48))
         }
         val question = label(18f, false).apply {
-            setText(if (id == "multitouch") R.string.question_multitouch else R.string.question_generic)
+            setText(if (currentId() == "multitouch") R.string.question_multitouch else R.string.question_generic)
             setPadding(0, 0, 0, dp(24))
         }
         val buttons = LinearLayout(this).apply {
@@ -125,14 +127,14 @@ class TestActivity : AppCompatActivity(), SensorEventListener {
         root.addView(bottom, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM))
         setContentView(root)
 
-        title.setText(titles[ids.indexOf(id)])
+        title.setText(titles[ids.indexOf(currentId())])
         buildContent()
     }
 
     private fun buildContent() {
         info = label(28f, true)
         level = ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal).apply { max = 100 }
-        when (id) {
+        when (currentId()) {
             "display" -> {
                 content.setBackgroundColor(colors[0])
                 content.setOnClickListener {
@@ -157,7 +159,7 @@ class TestActivity : AppCompatActivity(), SensorEventListener {
                     setPadding(dp(24), 0, dp(24), 0)
                 }
                 box.addView(info)
-                if (id == "microphone") {
+                if (currentId() == "microphone") {
                     box.addView(level, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = dp(24) })
                 }
                 content.addView(box, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
@@ -165,7 +167,7 @@ class TestActivity : AppCompatActivity(), SensorEventListener {
         }
     }
 
-    private fun sensorType() = when (id) {
+    private fun sensorType() = when (currentId()) {
         "proximity" -> Sensor.TYPE_PROXIMITY
         "light" -> Sensor.TYPE_LIGHT
         "accelerometer" -> Sensor.TYPE_ACCELEROMETER
@@ -218,7 +220,7 @@ class TestActivity : AppCompatActivity(), SensorEventListener {
 
     @Suppress("DEPRECATION")
     private fun startTest() {
-        when (id) {
+        when (currentId()) {
             "flashlight" -> {
                 info.setText(R.string.test_flashlight)
                 setTorch(true)
@@ -264,7 +266,7 @@ class TestActivity : AppCompatActivity(), SensorEventListener {
         recording = false
         tone?.release()
         tone = null
-        when (id) {
+        when (currentId()) {
             "flashlight" -> setTorch(false)
             "earpiece" -> (getSystemService(AUDIO_SERVICE) as AudioManager).mode = previousMode
             "vibration" -> (getSystemService(VIBRATOR_SERVICE) as Vibrator).cancel()
@@ -283,7 +285,7 @@ class TestActivity : AppCompatActivity(), SensorEventListener {
     }
 
     override fun onSensorChanged(event: SensorEvent) {
-        info.text = when (id) {
+        info.text = when (currentId()) {
             "proximity" -> String.format(Locale.US, "%.1f cm", event.values[0])
             "light" -> String.format(Locale.US, "%.1f lx", event.values[0])
             else -> String.format(Locale.US, "x %.2f\ny %.2f\nz %.2f", event.values[0], event.values[1], event.values[2])
